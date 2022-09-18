@@ -1,0 +1,171 @@
+*
+{
+    margin: 0;/*removendo espaço de margem*/
+    padding: 0;/*tira preenchimento interno da caixa*/
+    box-sizing: border-box;
+}
+ul
+{
+    list-style: none; /*remover o pontinho da lista*/
+}
+    body
+{
+    background-image: url(./assets/bg.jpg);
+    background-position: top center;/* posição do fundo*/
+    background-size: 100% auto;/*tamanho dela 100% horizontal e seja automatica na vertical */
+    background-repeat: no-repeat;/*não se repete o background (fundo)*/
+    background-color: #121214;/* cor hexadecimal (utilizada a última do fundo)*/
+}
+body *
+{
+    font-family: 'Inter', sans-serif;/*tudo que estiver em body fonte Inter, se não encontrar utilizar sans-serif*/
+    line-height: 160%;/*altura da linha*/
+}
+/*main *
+{
+    border: 1px solid red;
+}*/
+header
+{
+
+    padding-top: 32px;
+    height: calc(120px + 32px);
+}
+header div
+{
+    width: 120px;
+    margin: auto;
+    background-image: linear-gradient(90deg,#9572FC 0%, #43E7AD 50%, #E2D45C 100%);
+    border-radius: 50%;
+    display: flex;
+    padding: 4px;
+    transition: transform .3s;/*quando aplicar a propriedade transform de transição vai ficar .3segundos*/
+}
+header div:hover{
+    transform: scale(1.1);/*quando passar o mouse em cima vai aparecer escala de 1.1)*/
+}
+header div img
+{
+    width: 100%;
+    border-radius: 50%;
+}
+main
+{
+    max-width: 580px;/*largura máxima*/
+    width: 90%;/*largura de 90%*/
+    margin: 32px auto;/*primeiro valor para cima e para baixo e o outro para laterais */
+    display: grid;
+    gap: 24px;
+
+}
+section
+{
+    color: white;
+    background-image: linear-gradient(90deg,#9572FC 0%, #43E7AD 50%,#E2D45C 100%);
+    padding-top: 4px;
+    border-radius:10px;
+}
+
+section div
+{
+    background-color: #2A2634;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+}
+section h2
+{
+    letter-spacing: -0.47px;/*espaço entre as letras*/
+}
+section p
+{
+    letter-spacing: -0.18px;
+    color: #A1A1AA;
+}
+section ul
+{
+    display: flex;/*visualização das caixas no html - flex: uma ao lado da outra*/
+    flex-wrap: wrap; /*se houver mais caixas, vai se ajustando e não fique em apenas uma linha*/
+    gap: 16px;/*espaço entre as caixas*/
+    margin-top: 24px;
+}
+
+section ul li
+{
+    transition: transform .3s;
+}
+section ul li:hover
+{
+    transform: scale(1.1);
+}
+.games-list img
+{
+    width: 90px;
+    border-radius: 8px;/*borda arredondada de 8px*/
+}
+.canais-list img
+{
+    border-radius: 50%;
+    width: 70px;
+    border: 1px solid #443E54;
+}
+/* animation */
+header div
+{
+    animation: fromTop .2s 1s backwards; /*animação de 7 segundos com delay de 1 segundo, puxando a proriedade from*/
+}
+main section
+{
+    animation: fromBottom .7s backwards;
+}
+main section:nth-child(1)/*section filho nº 1*/
+{
+    animation-delay: 0;
+}
+main section:nth-child(2)/*section filho nº 1*/
+{
+    animation-delay: .4s;
+}
+main section:nth-child(3)/*section filho nº 1*/
+{
+    animation-delay: .8s;
+}
+@keyframes fromTop
+{
+    from
+    {
+        opacity: 0; /*opacidade */
+        transform: translateY(-30px);
+    }
+    to
+    {
+        opacity: 1;
+        transform: translateY(0);/*Y de cima para baixo*/
+    } 
+}
+@keyframes fromBottom
+{
+    from
+    {
+        opacity: 0; /*opacidade */
+        transform: translateY(30px);
+    }
+    to
+    {
+        opacity: 1;
+        transform: translateY(0);/*Y de cima para baixo*/
+    } 
+}
+/*@keyframes fromBottom
+{
+    from
+    {
+        opacity: 0; 
+        transform: translateX(-30px);
+    }
+    to
+    {
+        opacity: 1;
+        transform: translateX(0); ---> X esquerda para direita
+    } 
+}*/
