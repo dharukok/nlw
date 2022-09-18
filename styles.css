@@ -112,7 +112,10 @@ section ul li:hover
 /* animation */
 header div
 {
-    animation: fromTop .2s 1s backwards; /*animação de 7 segundos com delay de 1 segundo, puxando a proriedade from*/
+    animation: fromTop 750ms 150ms backwards; 
+    /*animação de 750ms com delay de 150ms, puxando a proriedade from*/
+    /*animation: fromTop .2s 1s backwards;*/
+    /*animação de 2 segundos com delay de 1 segundo, puxando a proriedade from*/
 }
 main section
 {
