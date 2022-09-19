@@ -10,6 +10,8 @@ Projeto construído no evento Next Level Week da Rochetseat
 ## Tecnologias
 
 -HTML
+
 -CSS
+
 -Git e Github
 
